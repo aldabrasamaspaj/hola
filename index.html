@@ -1,65 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Formulario de Pedido</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedido</title>
   <style>
     body {
-      background: #f9f9f9;
-      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      font-family: sans-serif;
       padding: 40px;
       text-align: center;
     }
     form {
       background: #fff;
-      padding: 25px 30px;
-      border-radius: 10px;
+      padding: 30px;
       max-width: 500px;
       margin: auto;
+      border-radius: 10px;
       box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    }
-    h2 {
-      margin-bottom: 20px;
     }
     input, textarea {
       width: 100%;
       padding: 10px;
       margin-top: 10px;
+      border-radius: 5px;
       border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 16px;
     }
     button {
-      margin-top: 20px;
-      padding: 10px 25px;
-      background-color: #007bff;
+      background: #28a745;
       color: white;
+      padding: 10px 20px;
       border: none;
-      border-radius: 6px;
+      border-radius: 5px;
+      margin-top: 20px;
       cursor: pointer;
-      font-size: 16px;
     }
     button:hover {
-      background-color: #0056b3;
+      background: #218838;
     }
   </style>
 </head>
 <body>
 
-  <form action="https://formsubmit.co/TUCORREO@ejemplo.com" method="POST">
-    <h2>Hacer un Pedido</h2>
+  <h2>Formulario de Pedido</h2>
 
-    <input type="text" name="nombre" placeholder="Tu nombre completo" required>
-    <input type="email" name="correo" placeholder="Tu correo electrónico" required>
-    <textarea name="pedido" placeholder="Escribe aquí lo que deseas pedir..." rows="6" required></textarea>
-
-    <!-- Sin captcha y sin verificación -->
-    <input type="hidden" name="_captcha" value="false">
-
-    <!-- Puedes eliminar esta línea si no quieres redirigir -->
-    <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">
-
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <input type="text" name="nombre" placeholder="Tu nombre" required>
+    <input type="email" name="correo" placeholder="Tu correo" required>
+    <textarea name="pedido" placeholder="Escribe tu pedido aquí..." rows="5" required></textarea>
     <button type="submit">Enviar Pedido</button>
   </form>
 
