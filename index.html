@@ -1,39 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Formulario de Pedido</title>
   <style>
     body {
+      background: #f9f9f9;
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
       padding: 40px;
       text-align: center;
     }
     form {
       background: #fff;
-      padding: 20px 30px;
-      border-radius: 12px;
+      padding: 25px 30px;
+      border-radius: 10px;
       max-width: 500px;
       margin: auto;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
     }
     h2 {
       margin-bottom: 20px;
     }
-    input, textarea, select {
+    input, textarea {
       width: 100%;
       padding: 10px;
       margin-top: 10px;
-      border-radius: 6px;
       border: 1px solid #ccc;
+      border-radius: 6px;
       font-size: 16px;
     }
     button {
       margin-top: 20px;
       padding: 10px 25px;
-      background-color: #28a745;
+      background-color: #007bff;
       color: white;
       border: none;
       border-radius: 6px;
@@ -41,33 +41,26 @@
       font-size: 16px;
     }
     button:hover {
-      background-color: #218838;
+      background-color: #0056b3;
     }
   </style>
 </head>
 <body>
 
-  <form action="https://formsubmit.co/samaniegoaspajo@gmail.com" method="POST">
-    <h2>Formulario de Pedido</h2>
+  <form action="https://formsubmit.co/TUCORREO@ejemplo.com" method="POST">
+    <h2>Hacer un Pedido</h2>
 
-    <input type="text" name="nombre" placeholder="Tu nombre" required>
-    <input type="tel" name="telefono" placeholder="Número de teléfono" required>
-    <input type="email" name="correo" placeholder="Correo electrónico" required>
+    <input type="text" name="nombre" placeholder="Tu nombre completo" required>
+    <input type="email" name="correo" placeholder="Tu correo electrónico" required>
+    <textarea name="pedido" placeholder="Escribe aquí lo que deseas pedir..." rows="6" required></textarea>
 
-    <select name="producto" required>
-      <option value="" disabled selected>Selecciona un producto</option>
-      <option value="Producto 1">Producto 1</option>
-      <option value="Producto 2">Producto 2</option>
-      <option value="Producto 3">Producto 3</option>
-    </select>
-
-    <textarea name="mensaje" placeholder="Detalles del pedido o dirección" rows="5" required></textarea>
-
-    <!-- Opcional: evitar captcha y redirigir a una página de agradecimiento -->
+    <!-- Sin captcha y sin verificación -->
     <input type="hidden" name="_captcha" value="false">
+
+    <!-- Puedes eliminar esta línea si no quieres redirigir -->
     <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">
 
-    <button type="submit">Enviar pedido</button>
+    <button type="submit">Enviar Pedido</button>
   </form>
 
 </body>
