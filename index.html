@@ -1,87 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Proyecto en GitHub</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f5f5f5;
-            padding: 40px;
-        }
-        img {
-            width: 300px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        }
-    </style>
-</head>
-<body>
-    <h1>¡Bienvenido a mi Proyecto!</h1>
-    <p>Este es un ejemplo básico de una página con imagen para GitHub Pages.</p>
-    <img src="imagen.jpg" alt="Descripción de la imagen">
-</body>
-</html>
-
-
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Formulario simple</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Pedido</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f5f5f5;
+      background-color: #f4f4f4;
       padding: 40px;
       text-align: center;
     }
     form {
       background: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      display: inline-block;
+      padding: 20px 30px;
+      border-radius: 12px;
+      max-width: 500px;
+      margin: auto;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    input, textarea {
+    h2 {
+      margin-bottom: 20px;
+    }
+    input, textarea, select {
       width: 100%;
       padding: 10px;
-      margin: 10px 0;
-      border-radius: 5px;
+      margin-top: 10px;
+      border-radius: 6px;
       border: 1px solid #ccc;
+      font-size: 16px;
     }
     button {
-      background: #007bff;
+      margin-top: 20px;
+      padding: 10px 25px;
+      background-color: #28a745;
       color: white;
-      padding: 10px 20px;
       border: none;
-      border-radius: 5px;
+      border-radius: 6px;
       cursor: pointer;
+      font-size: 16px;
     }
     button:hover {
-      background: #0056b3;
+      background-color: #218838;
     }
   </style>
 </head>
 <body>
 
-  <h2>Formulario de contacto</h2>
   <form action="https://formsubmit.co/samaniegoaspajo@gmail.com" method="POST">
+    <h2>Formulario de Pedido</h2>
+
     <input type="text" name="nombre" placeholder="Tu nombre" required>
-    <input type="email" name="email" placeholder="Tu correo" required>
-    <textarea name="mensaje" placeholder="Escribe tu mensaje aquí" rows="5" required></textarea>
+    <input type="tel" name="telefono" placeholder="Número de teléfono" required>
+    <input type="email" name="correo" placeholder="Correo electrónico" required>
 
-    <!-- Opcional: evitar el captcha -->
+    <select name="producto" required>
+      <option value="" disabled selected>Selecciona un producto</option>
+      <option value="Producto 1">Producto 1</option>
+      <option value="Producto 2">Producto 2</option>
+      <option value="Producto 3">Producto 3</option>
+    </select>
+
+    <textarea name="mensaje" placeholder="Detalles del pedido o dirección" rows="5" required></textarea>
+
+    <!-- Opcional: evitar captcha y redirigir a una página de agradecimiento -->
     <input type="hidden" name="_captcha" value="false">
-
-    <!-- Redirigir después del envío -->
     <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">
 
-    <button type="submit">Enviar</button>
+    <button type="submit">Enviar pedido</button>
   </form>
 
 </body>
